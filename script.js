@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scroll to section
     const menuItems = document.querySelectorAll('nav ul li a');
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
@@ -10,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form submission
+    
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -18,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
-        // Handle form submission (e.g., send data to server or display a message)
         console.log(name, email, message);
-        contactForm.reset(); // Reset form after submission
+        contactForm.reset(); 
     });
 });
 
@@ -30,4 +28,3 @@ function scrollToSection(section) {
         top: section.offsetTop,
     });
 }
-
